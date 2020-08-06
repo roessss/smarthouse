@@ -1,6 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorprimary"
+        android:padding="8dp"
+        android:text="SmartHouse"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceBody1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+    <TextView
+        android:layout_width="252dp"
+        android:layout_height="46dp"
+        android:layout_margin="0dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/colorAccent"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:text="Главное"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceBody1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <com.google.android.material.button.MaterialButton
+        app:icon="@drawable/ic_light"
+        android:layout_width="171dp"
+        android:layout_height="117dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="120dp"
+        app:backgroundTint="@color/colorprimary"
+        android:text="@string/_32"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="277dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        app:icon="@drawable/ic_light"
+        android:layout_width="170dp"
+        android:layout_height="116dp"
+        android:text="73"
+        android:layout_gravity="right"
+        android:layout_marginTop="-116dp"
+        app:backgroundTint="@color/colorprimary"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="277dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        app:icon="@drawable/ic_light"
+        android:layout_width="193dp"
+        android:layout_height="120dp"
+        app:backgroundTint="@color/colorAccent"
+        android:background="@color/design_default_color_primary"
+        android:text="Сохранить"
+        android:layout_marginTop="130dp"
+        android:layout_gravity="center_horizontal"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="485dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        app:icon="@drawable/ic_light"
+        android:layout_width="114dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="100dp"
+        app:backgroundTint="@color/colorprimary"
+        android:layout_gravity="end"
+
+        android:text="Назад"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="669dp"
+        tools:ignore="MissingConstraints" />
+
+
+
+</LinearLayout>
