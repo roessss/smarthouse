@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorprimary"
+        android:padding="8dp"
+        android:text="SmartHouse"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceBody1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:layout_width="252dp"
+        android:layout_height="46dp"
+        android:layout_margin="0dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/colorAccent"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:text="Главное"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceBody1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="179dp"
+        android:layout_height="88dp"
+        android:text="Доступ"
+        android:layout_gravity="right"
+        android:layout_marginTop="150dp"
+        app:backgroundTint="@color/colorprimary"
+        app:icon="@drawable/ic_light"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="179dp"
+        android:layout_height="88dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="-94dp"
+        android:text="Освещение"
+        app:backgroundTint="@color/colorprimary"
+        app:icon="@drawable/ic_light"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="148dp"
+        android:text="Электропитание"
+        app:backgroundTint="@color/colorprimary"
+        app:icon="@drawable/ic_light"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="-89dp"
+        android:text="Электропитание"
+        app:backgroundTint="@color/colorprimary"
+        app:icon="@drawable/ic_light"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+</LinearLayout>
