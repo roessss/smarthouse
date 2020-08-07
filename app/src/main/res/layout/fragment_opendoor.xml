@@ -82,5 +82,17 @@
         tools:layout_editor_absoluteY="443dp"
         tools:ignore="MissingConstraints" />
 
+    <com.google.android.material.button.MaterialButton
+        app:icon="@drawable/ic_light"
+        android:layout_width="114dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="65dp"
+        app:backgroundTint="@color/colorprimary"
+        android:layout_gravity="end"
+        android:text="Назад"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="669dp"
+        tools:ignore="MissingConstraints" />
+
 
 </LinearLayout>
