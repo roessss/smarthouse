@@ -39,7 +39,7 @@
         android:background="@color/colorAccent"
         android:layout_gravity="center"
         android:padding="10dp"
-        android:text="Главное"
+        android:text="Доступ"
         android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceBody1"
         tools:ignore="MissingConstraints"
