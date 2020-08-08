@@ -20,15 +20,15 @@ object WebClient {
         .build()
         .create(ApiService::class.java)
 
-    suspend fun getLightState() {
+    suspend fun getLightState():LightStatus {
         return withContext(Dispatchers.IO) {
-            api.getLightStatus()
+            api.getLightState()
         }
     }
 
     suspend fun setLightState(state: LightStatus) {
         return withContext(Dispatchers.IO) {
-            api.setLightState(state)
+            api.setLightStatus(state)
         }
     }
 }

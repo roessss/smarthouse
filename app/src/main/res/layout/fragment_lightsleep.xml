@@ -64,7 +64,7 @@
         app:backgroundTint="@color/colorAccent"
         android:background="@color/design_default_color_primary"
         android:text="Сохранить"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="100dp"
         android:layout_gravity="center_horizontal"
         tools:layout_editor_absoluteX="109dp"
         tools:layout_editor_absoluteY="485dp"

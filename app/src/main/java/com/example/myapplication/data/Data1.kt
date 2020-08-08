@@ -17,3 +17,12 @@ class OpenDoor(
     val date: Int,
     val openDoor: Boolean
 )
+
+class SecurityLog(
+    val Log: Array<Log>
+)
+
+class Log(
+    val Date: String,
+    val open_door: Int
+)

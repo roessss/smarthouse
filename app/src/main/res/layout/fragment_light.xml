@@ -68,7 +68,7 @@
         app:backgroundTint="@color/colorAccent"
         android:text="ВКЛ/ВЫКЛ"
         android:layout_gravity="center"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         tools:layout_editor_absoluteX="73dp"
         tools:layout_editor_absoluteY="443dp"
         tools:ignore="MissingConstraints" />
@@ -77,7 +77,7 @@
         app:icon="@drawable/ic_light"
         android:layout_width="114dp"
         android:layout_height="62dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="55dp"
         app:backgroundTint="@color/colorprimary"
         android:layout_gravity="end"
         android:text="Назад"

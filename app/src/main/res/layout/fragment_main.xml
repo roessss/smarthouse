@@ -17,7 +17,6 @@
         android:text="SmartHouse"
         android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceBody1"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="0dp" />
 
@@ -32,7 +31,6 @@
         android:text="Главное"
         android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceBody1"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="88dp"
         tools:layout_editor_absoluteY="38dp" />
 
@@ -44,7 +42,6 @@
         android:layout_marginTop="150dp"
         app:backgroundTint="@color/colorprimary"
         app:icon="@drawable/ic_light"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="245dp" />
 
@@ -56,7 +53,6 @@
         android:text="Освещение"
         app:backgroundTint="@color/colorprimary"
         app:icon="@drawable/ic_light"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="245dp" />
 
@@ -68,7 +64,6 @@
         android:text="Электропитание"
         app:backgroundTint="@color/colorprimary"
         app:icon="@drawable/ic_light"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="245dp" />
 
@@ -80,7 +75,6 @@
         android:text="Климат"
         app:backgroundTint="@color/colorprimary"
         app:icon="@drawable/ic_light"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="245dp" />
 

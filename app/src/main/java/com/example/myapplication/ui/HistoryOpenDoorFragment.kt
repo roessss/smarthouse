@@ -13,6 +13,6 @@ class HistoryOpenDoorFragment :Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_light, container, false)
+        return inflater.inflate(R.layout.fragment_historyopendoor, container, false)
     }
 }
