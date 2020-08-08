@@ -3,7 +3,7 @@ package com.example.myapplication.data
 
 class EnergyHistoryItem(
     val date: String,
-    val light: Int
+    val energy: Int
 )
 
 
@@ -28,13 +28,13 @@ class ClimateData(
 )
 class ClimateTemp(
     val tempcomnata: Boolean,
-    val minLight: Int,
-    val maxLight: Int
+    val min: Int,
+    val max: Int
 )
 class ClimateVlaga(
     val vlaga: Boolean,
-    val minLight: Int,
-    val maxLight: Int
+    val min: Int,
+    val max: Int
 )
 class ClimatePrinudl(
     val window:Boolean,

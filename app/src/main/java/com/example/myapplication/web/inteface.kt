@@ -1,9 +1,6 @@
 package com.example.myapplication.web
 
-import com.example.myapplication.data.EnergyHistory
-import com.example.myapplication.data.ClimateData
-import com.example.myapplication.data.ClimateTemp
-import com.example.myapplication.data.ClimateVlaga
+import com.example.myapplication.data.*
 import retrofit2.http.GET
 import retrofit2.http.POST
 
@@ -16,6 +13,8 @@ interface inteface {
     suspend fun getClimateData(): ClimateData
     @GET("get/home/energy/history")
     suspend fun getEnergyHistory():EnergyHistory
+    @POST("push/home/climate/prinudl")
+    suspend fun pushClimatePrinudl (state: ClimatePrinudl)
 
 
 }
