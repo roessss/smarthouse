@@ -15,14 +15,14 @@ object WebClient {
 
 
     val api = Retrofit.Builder()
-        .baseUrl("") // Адрес API, нужно узнать у команды
+        .baseUrl("https://ms.newtonbox.ru/smarthome2/") // Адрес API, нужно узнать у команды
         .addConverterFactory(GsonConverterFactory.create(gson))
         .build()
         .create(ApiService::class.java)
 
-    suspend fun getLightState():LightStatus {
+    suspend fun getLightStatus():LightStatus {
         return withContext(Dispatchers.IO) {
-            api.getLightState()
+            api.getLightStatus()
         }
     }
 

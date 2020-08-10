@@ -25,6 +25,8 @@ interface ApiService{
     suspend fun setLightSleepState(sleepState:Sleep )
     @GET("get/home/light/lights_state")
     suspend fun getLightState(): LightStatus
+    @GET("get/home/light/light_status")
+    suspend fun getLightStatus(): LightStatus
 
 }
 

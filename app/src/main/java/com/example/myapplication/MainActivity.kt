@@ -7,13 +7,38 @@ import com.example.myapplication.R.*
 import com.example.myapplication.ui.MainFragment
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState == null) {
+            replace(MainFragment())
+        }
+
+
+        if (savedInstanceState == null) {
             navigateTo(MainFragment())
         }
+    }
+
+    fun replace(fragment: Fragment) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.container, fragment)
+            .commit()
+    }
+
+    fun add(fragment: Fragment) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.container, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun back() {
+        supportFragmentManager.popBackStack()
     }
 
 
@@ -24,4 +49,6 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 }
+
+
 

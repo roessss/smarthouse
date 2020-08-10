@@ -1,11 +1,13 @@
 package com.example.myapplication.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.example.myapplication.web.WebClient
 import kotlinx.coroutines.launch
@@ -17,10 +19,11 @@ class MainFragment : Fragment() {
     fun update() {
         lifecycleScope.launch {
 
-            val state = WebClient.getLightState()
-             lamp = state.state
-            minLevel = state.levelMin
-            maxLevel = state.levelMax
+            val state = WebClient.getLightStatus()
+            lamp = state.state
+            minLevel = state.level_min
+            maxLevel = state.level_max
+            Log.d("MainFragment","$minLevel  $maxLevel")
         }
     }
 
@@ -30,5 +33,13 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_main, container, false)
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+        update()
+
+
+
     }
 }
