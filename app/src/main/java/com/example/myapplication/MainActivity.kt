@@ -63,6 +63,25 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.popBackStack()
     }
 
+    fun replace(fragment: Fragment) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.container, fragment)
+            .commit()
+    }
+
+    fun add(fragment: Fragment) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.container, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun back() {
+        supportFragmentManager.popBackStack()
+    }
+
 
     fun navigateTo(fragment: Fragment) {
         supportFragmentManager
