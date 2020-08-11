@@ -15,7 +15,7 @@ interface ApiService{
     @GET("get/light/sleep")
     suspend fun getLightStatusSleep(): Sleep
     @POST("set/home/security/open_door")
-    suspend fun setDoorState(@Body state: OpenDoor)
+    suspend fun setDoorState()
     @GET("get/home/security/log")
     suspend fun getLightHistory(): SecurityLog
     @POST("set/home/security/open_door_call")

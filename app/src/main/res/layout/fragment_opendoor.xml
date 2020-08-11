@@ -50,7 +50,7 @@
         android:layout_width="179dp"
         android:layout_height="93dp"
         android:layout_gravity="left"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="40dp"
         android:text="Открытие по вызову"
         app:backgroundTint="@color/colorprimary"
         app:icon="@drawable/ic_light"
@@ -59,6 +59,7 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOpen"
         android:layout_width="179dp"
         android:layout_height="93dp"
         android:text="Открытие"
@@ -73,11 +74,12 @@
     <com.google.android.material.button.MaterialButton
         app:icon="@drawable/ic_light"
         android:layout_width="265dp"
+        android:id="@+id/btnlog"
         android:layout_height="152dp"
         app:backgroundTint="@color/colorAccent"
         android:text="История"
         android:layout_gravity="center"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         tools:layout_editor_absoluteX="73dp"
         tools:layout_editor_absoluteY="443dp"
         tools:ignore="MissingConstraints" />
@@ -86,7 +88,7 @@
         app:icon="@drawable/ic_light"
         android:layout_width="114dp"
         android:layout_height="62dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="35dp"
         app:backgroundTint="@color/colorprimary"
         android:layout_gravity="end"
         android:text="Назад"

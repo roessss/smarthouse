@@ -36,10 +36,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="179dp"
+        android:id="@+id/btndoor"
         android:layout_height="88dp"
         android:text="Доступ"
         android:layout_gravity="right"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         app:backgroundTint="@color/colorprimary"
         app:icon="@drawable/ic_light"
         tools:layout_editor_absoluteX="16dp"

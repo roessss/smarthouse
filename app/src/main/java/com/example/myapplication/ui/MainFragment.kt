@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.myapplication.MainActivity
@@ -15,6 +16,7 @@ import com.example.myapplication.data.OpenDoor
 import com.example.myapplication.web.WebClient
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.launch
+import retrofit2.HttpException
 import java.nio.file.WatchEvent
 
 class MainFragment : Fragment() {
@@ -36,11 +38,7 @@ class MainFragment : Fragment() {
         WebClient.setLightStatus(LightStatus(true,20,50))
     }
 }
-    fun setDoorState(){
-        lifecycleScope.launch {
-            WebClient.setOpenDoorState(OpenDoor(202087, true))
-        }
-    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -53,12 +51,19 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
         val btnlite = view.findViewById<Button>(R.id.btnlite)
         btnlite.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container,LightFragment())?.commit()
+            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container,LightFragment())?.addToBackStack(null)?.commit()
 
         }
+        val btndoor = view.findViewById<Button>(R.id.btndoor)
+        btndoor.setOnClickListener{
+            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container,OpenDoorFragment())?.addToBackStack(null)?.commit()
+
+        }
+
+
         update()
         //setLight()
-        //setDoorState()
+
 
 
     }
