@@ -46,6 +46,7 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnlite"
         android:layout_width="179dp"
         android:layout_height="88dp"
         android:layout_gravity="left"
