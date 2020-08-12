@@ -36,6 +36,11 @@ class OpenDoorFragment: Fragment() {
            // Snackbar.make(view, "Open the door...", Snackbar.LENGTH_SHORT).show()
             openDoor()
         }
+        val btnback = view.findViewById<Button>(R.id.btnBack)
+        btnback.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.container, MainFragment())?.addToBackStack(null)?.commit()
+        }
     }
 
     fun openDoor(){

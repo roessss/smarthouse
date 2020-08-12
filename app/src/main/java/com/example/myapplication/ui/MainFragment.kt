@@ -6,18 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.example.myapplication.data.LightStatus
-import com.example.myapplication.data.OpenDoor
 import com.example.myapplication.web.WebClient
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.launch
-import retrofit2.HttpException
-import java.nio.file.WatchEvent
 
 class MainFragment : Fragment() {
     var lamp: Boolean = false
@@ -35,7 +29,7 @@ class MainFragment : Fragment() {
     }
       fun setLight() {
     lifecycleScope.launch{
-        WebClient.setLightStatus(LightStatus(true,20,50))
+        WebClient.setLightState(LightStatus(true,20,50))
     }
 }
 

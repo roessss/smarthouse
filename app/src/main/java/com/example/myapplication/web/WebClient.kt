@@ -1,8 +1,7 @@
 package com.example.myapplication.web
 
 import com.example.myapplication.data.LightStatus
-import com.example.myapplication.data.OpenDoor
-import com.example.myapplication.data.Sleep
+import com.example.myapplication.data.TokenRequest
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.Dispatchers
@@ -34,16 +33,22 @@ object WebClient {
         }
     }
 
-    suspend fun setLightStatus(state: LightStatus) {
+    suspend fun setLightState(state: LightStatus) {
         return withContext(Dispatchers.IO) {
-            api.setLightStatus(state)
+            api.setLightState(state)
         }
     }
 
 
     suspend fun setOpenDoorState() {
         return withContext(Dispatchers.IO) {
-            api.setDoorState()
+            api.setOpenDoor()
+        }
+    }
+
+    suspend fun setToken(token: TokenRequest){
+        return withContext(Dispatchers.IO){
+            api.setToken(token)
         }
     }
 

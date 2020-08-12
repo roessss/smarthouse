@@ -64,6 +64,7 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLight"
         app:icon="@drawable/ic_light"
         android:layout_width="265dp"
         android:layout_height="152dp"
@@ -77,6 +78,7 @@
 
     <com.google.android.material.button.MaterialButton
         app:icon="@drawable/ic_light"
+        android:id="@+id/btnBack"
         android:layout_width="114dp"
         android:layout_height="62dp"
         android:layout_marginTop="39dp"

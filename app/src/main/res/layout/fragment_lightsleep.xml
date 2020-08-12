@@ -74,6 +74,7 @@
         app:icon="@drawable/ic_light"
         android:layout_width="114dp"
         android:layout_height="62dp"
+        android:id="@+id/btnBack"
         android:layout_marginTop="25dp"
         app:backgroundTint="@color/colorprimary"
         android:layout_gravity="end"
