@@ -1,5 +1,7 @@
 package com.example.myapplication.data
 
+import com.google.gson.annotations.SerializedName
+
 
 class LightStatus(
     val state: Boolean,
@@ -19,10 +21,17 @@ class OpenDoor(
 )
 
 class SecurityLog(
-    val Log: Array<Log>
+   @SerializedName("Log") val Log: List<Log>
 )
 
 class Log(
-    val Date: String,
-    val open_door: Int
-)
+    @SerializedName("Date") val Date: String,
+    @SerializedName("open_door") val open_door: List<Float>
+){
+    override fun toString(): String {
+        return "Log(Date='$Date', open_door=$open_door)"
+    }
+}
+
+
+

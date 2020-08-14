@@ -1,6 +1,7 @@
 package com.example.myapplication.web
 
 import com.example.myapplication.data.LightStatus
+import com.example.myapplication.data.SecurityLog
 import com.example.myapplication.data.TokenRequest
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.GsonBuilder
@@ -43,6 +44,16 @@ object WebClient {
     suspend fun setOpenDoorState() {
         return withContext(Dispatchers.IO) {
             api.setOpenDoor()
+        }
+    }
+    suspend fun getDoorLog(): SecurityLog{
+        return withContext(Dispatchers.IO){
+            api.getSecurityLog()
+        }
+    }
+    suspend fun setOpenDoorCall(){
+        return withContext(Dispatchers.IO){
+            api.setOpenDoorCall()
         }
     }
 

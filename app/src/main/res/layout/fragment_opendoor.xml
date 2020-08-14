@@ -47,6 +47,7 @@
         tools:layout_editor_absoluteY="38dp" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDoorCall"
         android:layout_width="179dp"
         android:layout_height="93dp"
         android:layout_gravity="left"
@@ -72,6 +73,7 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <com.google.android.material.button.MaterialButton
+
         app:icon="@drawable/ic_light"
         android:layout_width="265dp"
         android:id="@+id/btnlog"

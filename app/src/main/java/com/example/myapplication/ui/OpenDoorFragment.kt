@@ -41,10 +41,13 @@ class OpenDoorFragment: Fragment() {
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.container, MainFragment())?.addToBackStack(null)?.commit()
         }
+        val btnDoorCall = view.findViewById<Button>(R.id.btnDoorCall)
+        btnDoorCall.setOnClickListener{
+            openDoorCall()
+        }
     }
 
     fun openDoor(){
-
         lifecycleScope.launch {
             try {
                 WebClient.setOpenDoorState()
@@ -54,6 +57,15 @@ class OpenDoorFragment: Fragment() {
                 Toast.makeText(this@OpenDoorFragment.context, "Timeout!", Toast.LENGTH_SHORT).show()
             }
         }
+    }
 
+    fun openDoorCall(){
+        lifecycleScope.launch {
+            try {
+                WebClient.setOpenDoorCall()
+            }catch(ex: HttpException){
+
+            }
+        }
     }
 }
