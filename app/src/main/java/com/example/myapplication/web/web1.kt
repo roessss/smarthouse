@@ -23,7 +23,7 @@ interface ApiService{
     suspend fun getSecurityLog(): SecurityLog
 
     @POST("set/home/security/open_door_call")
-    suspend fun setOpenDoorCall()
+    suspend fun setOpenDoorCall(@Body openDoor: OpenDoor)
 
     @POST("set/home/light/lights_state")
     suspend fun setLightState()
@@ -31,7 +31,7 @@ interface ApiService{
     @POST("set/light/sleep")
     suspend fun setLightSleepState(@Body sleepState:Sleep )
 
-    @POST("set/token")
+    @POST("set/home/service/deviceToken")
     suspend fun setToken(@Body token: TokenRequest)
 
 }

@@ -6,6 +6,7 @@ import android.app.PendingIntent
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Build
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.getSystemService
@@ -40,6 +41,8 @@ class MessagingService : FirebaseMessagingService() {
     }
 
     override fun onMessageReceived(msg: RemoteMessage) {
+    Log.v("PushTest","onMessageReceived " +
+            msg.data.toString())
         val type = msg.data["type"] ?: return
 // В зависимости от типа, показываем разные уведомления
         when (type) {
@@ -53,7 +56,9 @@ class MessagingService : FirebaseMessagingService() {
         val date = msg.data["date"] ?: return // Параметры обязательные, если не хватает,
         val photo = msg.data["photo"] ?: return // считаем, что уведомление недействительно
         GlobalScope.launch {
+     Log.v("PushTest","1")
             val bitmap = getBitmap(photo) // Скачиваем картинку по URL
+            Log.v("PushTest","2")
             val notification = NotificationCompat.Builder(this@MessagingService, "notifications")
                 .setContentTitle("Пришел гость: $date") // Заголовок уведомления
                 .setContentText("Открыть дверь?")
@@ -65,6 +70,7 @@ class MessagingService : FirebaseMessagingService() {
                 )
                 .build()
             notificationManager.notify(date.hashCode(), notification) // Показываем его
+            Log.v("PushTest","3")
         }
     }
 

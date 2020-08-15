@@ -1,3 +1,5 @@
 package com.example.myapplication.data
 
-class TokenRequest(val token: String)
+import com.google.gson.annotations.SerializedName
+
+class TokenRequest(@SerializedName("deviceToken") val deviceToken: String)

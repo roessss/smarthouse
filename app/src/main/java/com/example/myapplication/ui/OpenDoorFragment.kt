@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.myapplication.R
+import com.example.myapplication.data.OpenDoor
 import com.example.myapplication.web.WebClient
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
@@ -62,7 +63,7 @@ class OpenDoorFragment: Fragment() {
     fun openDoorCall(){
         lifecycleScope.launch {
             try {
-                WebClient.setOpenDoorCall()
+                WebClient.setOpenDoorCall(OpenDoor(15082020,true))
             }catch(ex: HttpException){
 
             }
