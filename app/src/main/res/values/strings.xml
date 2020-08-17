@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="temp">Температура в комнате</string>
+    <string name="next">Далее</string>
+    <string name="nathad">Назад</string>
+    <string name="vlaga">Влага</string>
+    <string name="davl">Давление</string>
+    <string name="tempulica">Температура на улице</string>
+    <string name="data">Данные за 3 дня</string>
+    <string name="onoff">Принудительное включение</string>
+    <string name="prinudlwindow">Окно</string>
+    <string name="prinudlpechka">Печка</string>
+    <string name="prinudluvlag">Увлажнитель</string>
+    <string name="temp1">Температура</string>
+    <string name="vlaga1">Влажность</string>
+    <string name="vlaga2">Старт</string>
+    <string name="energy">Энергопотребление</string>
+    <string name="energyhistory">Энергопотребление история </string>
+    <string name="energyhistory1">1 день</string>
+    <string name="energyhistory2">2 день</string>
+    <string name="energyhistory3">3 день</string>
     <string name="_32">32</string>
 </resources>
