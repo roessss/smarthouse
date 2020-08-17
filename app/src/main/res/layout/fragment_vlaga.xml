@@ -22,7 +22,7 @@
         android:layout_marginStart="16dp"
 
         android:layout_marginBottom="16dp"
-        android:text="@string/nathad"
+        android:text="Назад"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -36,7 +36,7 @@
         android:layout_marginTop="113dp"
         android:layout_marginEnd="146dp"
         android:layout_marginBottom="184dp"
-        android:text="@string/vlaga2"
+        android:text="Старт"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +81,7 @@
         android:layout_marginEnd="159dp"
         android:background="@color/colorAccent"
         android:padding="10dp"
-        android:text="@string/vlaga1"
+        android:text="Влажность"
         android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceBody1"
         app:layout_constraintEnd_toEndOf="parent"
