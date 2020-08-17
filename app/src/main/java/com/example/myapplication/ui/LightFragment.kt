@@ -1,6 +1,8 @@
 package com.example.myapplication.ui
 
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +16,7 @@ import kotlinx.coroutines.launch
 
 class LightFragment : Fragment() {
    private var lightState = false
+    private var currentState = 0
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val btnsleep = view.findViewById<Button>(R.id.btnsleep)
         btnsleep.setOnClickListener {
@@ -31,6 +34,10 @@ class LightFragment : Fragment() {
         btnauto.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.container, LightAutoFragment())?.addToBackStack(null)?.commit()
+        }
+        lifecycleScope.launch{
+            val lightStatus =  WebClient.getLightStatus()
+            currentState = lightStatus.level_max
         }
         val btnLight = view.findViewById<Button>(R.id.btnLight)
         btnLight.setOnClickListener{
@@ -54,7 +61,7 @@ class LightFragment : Fragment() {
 
     fun setLight(b: Boolean){
         lifecycleScope.launch{
-            WebClient.setLightState(LightStatus(b, 0, 0))
+            WebClient.setLightState(LightStatus(b, 0, currentState))
         }
     }
 }
